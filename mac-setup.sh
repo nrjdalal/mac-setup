@@ -9,6 +9,7 @@ source ~/.zshrc
 
 brew install git
 brew install node
+brew install wget
 
 brew install --cask elmedia-player
 brew install --cask figma
@@ -32,3 +33,7 @@ brew install --cask bartender
 brew install --cask keka
 brew install --cask rectangle
 brew install --cask stats
+
+wget -O ~/Downloads/designer.dmg 'https://store.serif.com/download/aa4dee/'
+wget -O ~/Downloadsphoto.dmg 'https://store.serif.com/download/075b51/'
+wget -O ~/Downloadspublisher.dmg 'https://store.serif.com/download/7ef252/'
