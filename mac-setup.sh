@@ -10,6 +10,7 @@ source ~/.zshrc
 brew install git
 brew install node
 
+brew install --cask elmedia-player
 brew install --cask figma
 brew install --cask firefox
 brew install --cask fontbase
@@ -17,11 +18,10 @@ brew install --cask google-chrome
 brew install --cask mongodb-compass
 brew install --cask obs
 brew install --cask postman
+brew install --cask qbittorrent
 brew install --cask telegram
-brew install --cask transmission
 brew install --cask typora
 brew install --cask visual-studio-code
-brew install --cask vlc
 brew install --cask whatsapp
 
 brew tap mongodb/brew
