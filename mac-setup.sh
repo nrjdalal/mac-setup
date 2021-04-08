@@ -3,7 +3,7 @@ sudo softwareupdate --install-rosetta
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
-# echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> .zprofile
+# echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 # eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew install git
