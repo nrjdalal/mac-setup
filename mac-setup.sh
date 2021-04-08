@@ -1,3 +1,5 @@
+# intial setup script for mac m1
+
 sudo softwareupdate --install-rosetta
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
