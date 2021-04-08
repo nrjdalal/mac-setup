@@ -2,7 +2,10 @@
 
 sudo softwareupdate --install-rosetta --agree-to-license
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" << INPUT
+
+INPUT
+
 echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 
