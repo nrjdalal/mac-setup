@@ -35,5 +35,5 @@ brew install --cask rectangle
 brew install --cask stats
 
 wget -O ~/Downloads/designer.dmg 'https://store.serif.com/download/aa4dee/'
-wget -O ~/Downloadsphoto.dmg 'https://store.serif.com/download/075b51/'
-wget -O ~/Downloadspublisher.dmg 'https://store.serif.com/download/7ef252/'
+wget -O ~/Downloads/photo.dmg 'https://store.serif.com/download/075b51/'
+wget -O ~/Downloads/publisher.dmg 'https://store.serif.com/download/7ef252/'
