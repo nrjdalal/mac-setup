@@ -37,3 +37,6 @@ brew install --cask stats
 wget -O ~/Downloads/designer.dmg 'https://store.serif.com/download/aa4dee/'
 wget -O ~/Downloads/photo.dmg 'https://store.serif.com/download/075b51/'
 wget -O ~/Downloads/publisher.dmg 'https://store.serif.com/download/7ef252/'
+hdiutil mount ~/Downloads/designer.dmg
+hdiutil mount ~/Downloads/photo.dmg
+hdiutil mount ~/Downloads/publisher.dmg
