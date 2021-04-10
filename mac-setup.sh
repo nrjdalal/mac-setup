@@ -8,11 +8,13 @@ echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.zshrc
 source ~/.zshrc
 
 brew install git
-brew install node
+brew install node@14
 brew install wget
 
 brew install --cask balenaetcher
 brew install --cask bartender
+brew install --cask iterm2
+brew install --cask jettison
 brew install --cask keka
 brew install --cask rectangle
 brew install --cask stats
