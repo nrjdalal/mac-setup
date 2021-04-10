@@ -22,11 +22,11 @@ brew install --cask stats
 brew install --cask telegram
 brew install --cask whatsapp
 
-brew install --cask elmedia-player
 brew install --cask figma
 brew install --cask firefox
 brew install --cask fontbase
 brew install --cask google-chrome
+brew install --cask iina
 brew install --cask mongodb-compass
 brew install --cask obs
 brew install --cask postman
