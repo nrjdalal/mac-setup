@@ -19,6 +19,7 @@ hdiutil unmount '/Volumes/Affinity Publisher'
 rm ~/Downloads/publisher.dmg
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" << INPUT
+
 INPUT
 
 echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.zshrc
