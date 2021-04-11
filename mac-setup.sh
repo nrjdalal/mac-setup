@@ -1,5 +1,17 @@
 sudo softwareupdate --install-rosetta --agree-to-license
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" << INPUT
+
+INPUT
+
+echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.zshrc
+source ~/.zshrc
+
+brew install git
+brew install node@14
+brew install wget
+brew install youtube-dl
+
 wget -O ~/Downloads/designer.dmg 'https://store.serif.com/download/aa4dee/'
 hdiutil mount ~/Downloads/designer.dmg
 sudo cp -R "/Volumes/Affinity Designer/Affinity Designer.app" /Applications
@@ -17,18 +29,6 @@ hdiutil mount ~/Downloads/publisher.dmg
 sudo cp -R "/Volumes/Affinity Publisher/Affinity Publisher.app" /Applications
 hdiutil unmount '/Volumes/Affinity Publisher'
 rm ~/Downloads/publisher.dmg
-
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" << INPUT
-
-INPUT
-
-echo 'export PATH=/opt/homebrew/bin:$PATH' >> ~/.zshrc
-source ~/.zshrc
-
-brew install git
-brew install node@14
-brew install wget
-brew install youtube-dl
 
 brew install --cask balenaetcher
 # brew install --cask bartender
