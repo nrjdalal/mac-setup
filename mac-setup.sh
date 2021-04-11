@@ -37,7 +37,6 @@ brew install --cask blackhole-2ch
 brew install --cask rectangle
 brew install --cask stats
 
-brew install --cask cakebrew
 brew install --cask figma
 brew install --cask firefox
 brew install --cask fontbase
