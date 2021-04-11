@@ -1,0 +1,42 @@
+1. General
+     Show scroll bars: Always
+
+2. Desktop & Screen Saver
+     Screen Saver
+       Start after: 30 Minutes
+
+3. Dock & Menu Bar
+     Dock
+       Position on screen: Left
+       Automatically hide and show the Dock: Yes
+       Show recent applications in Dock: No
+     Menu Bar
+       Automatically hide and show menu bar: Yes
+     Bluetooth
+       Show in Menu Bar: Yes
+     AirDrop
+       Show in Menu Bar: Yes
+     Clock
+       Show the day of the week: No
+       Show date: No
+       Show AM/PM: No
+ 
+4. Mission Control
+     Hot corners
+       Top left: Mission Control
+       Top right: Application Windows
+       Bottom right: Desktop
+       Bottom left: Launchpad
+
+5. Keyboard
+     Text
+       Capitalize words automatically: No
+
+6. Energy Saver
+     Turn display off after: Never
+     Prevent computer from sleeping automatically when the display is off: Yes
+     Put hard disks to sleep when possible: No
+     Start up automatically after a power failure: Yes
+
+7. Sharing
+     File Sharing: On
