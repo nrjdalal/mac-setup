@@ -1,7 +1,7 @@
 brew install mas
 
 # Dropover - Easier Drag & Drop
-mac install 1355679052
+mas install 1355679052
 # Keynote
 mas install 409183694
 # Numbers
