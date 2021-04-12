@@ -9,6 +9,7 @@ source ~/.zshrc
 
 brew install git
 brew install node@14
+brew install smartmontools
 brew install wget
 brew install youtube-dl
 
@@ -31,10 +32,7 @@ hdiutil unmount '/Volumes/Affinity Publisher'
 rm ~/Downloads/publisher.dmg
 
 brew install --cask balenaetcher
-# brew install --cask bartender
 brew install --cask blackhole-2ch
-# brew install --cask jettison
-# brew install --cask keka
 brew install --cask rectangle
 brew install --cask stats
 
@@ -62,3 +60,7 @@ brew install --cask whatsapp
 brew tap mongodb/brew
 brew install mongodb-community
 brew services start mongodb-community
+
+# brew install --cask bartender
+# brew install --cask jettison
+# brew install --cask keka
