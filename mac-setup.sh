@@ -1,4 +1,4 @@
-PROMPT="%F{green}%~ >%f "
+PROMPT='%(?.%F{green}.%F{red})%B%~ %(!.#.>)%b%f '
 source ~/.zshrc
 
 sudo softwareupdate --install-rosetta --agree-to-license
