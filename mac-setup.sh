@@ -1,6 +1,8 @@
 PROMPT='%(?.%F{green}.%F{red})%B%~ %(!.#.>)%b%f '
 source ~/.zshrc
 
+# temp change
+
 sudo softwareupdate --install-rosetta --agree-to-license
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" << INPUT
