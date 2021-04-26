@@ -1,7 +1,5 @@
-PROMPT='%(?.%F{green}.%F{red})%B%~ %(!.#.>)%b%f '
+echo 'PROMPT="%(?.%F{green}.%F{red})%B%~ %(!.#.>)%b%f "' >> ~/.zshrc
 source ~/.zshrc
-
-# temp change
 
 sudo softwareupdate --install-rosetta --agree-to-license
 
