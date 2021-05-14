@@ -1,0 +1,1 @@
+cinebench geekbench novabench smartctl
