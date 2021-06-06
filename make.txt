@@ -1,0 +1,55 @@
+brew install libffi gettext glib pkg-config autoconf automake pixman ninja
+
+git clone https://github.com/qemu/qemu && cd qemu
+
+https://gist.github.com/niw/e4313b9c14e968764a52375da41b4278
+
+------------------------------------------------------------------------------------
+
+git checkout v6.0.0
+curl https://patchwork.kernel.org/series/485309/mbox/ | git am --exclude=MAINTAINERS
+curl https://patchwork.kernel.org/series/474841/mbox/ | git am
+
+mkdir build
+cd build
+../configure --target-list=aarch64-softmmu --enable-cocoa
+make -j8
+sudo make install
+
+------------------------------------------------------------------------------------
+
+git checkout 3bbaed2cd0 -b wip/hvf
+curl 'https://patchwork.kernel.org/series/485309/mbox/'|git am --3way
+curl 'https://patchwork.kernel.org/series/474841/mbox/'|git am --3way
+
+mkdir build
+cd build
+../configure --target-list=aarch64-softmmu --enable-cocoa
+make -j8
+sudo make install
+
+------------------------------------------------------------------------------------
+
+git checkout 3bbaed2cd0
+curl 'https://patchwork.kernel.org/series/485309/mbox/' | git am
+curl 'https://patchwork.kernel.org/series/474841/mbox/' | git am
+
+mkdir build
+cd build
+../configure --target-list=aarch64-softmmu --enable-cocoa
+make -j8
+sudo make install
+
+------------------------------------------------------------------------------------
+
+cd ~ && rm -rf qemu && cp -R cloned qemu && cd qemu
+
+git checkout $COMMIT
+curl 'https://patchwork.kernel.org/series/485309/mbox/' | git am
+curl 'https://patchwork.kernel.org/series/474841/mbox/' | git am
+
+mkdir build
+cd build
+../configure --target-list=aarch64-softmmu
+make -j8
+sudo make install
