@@ -4,8 +4,11 @@ sudo softwareupdate --install-rosetta --agree-to-license
 
 INPUT
 
-echo 'export PATH=/opt/homebrew/bin:$PATH' >>~/.zshrc
-source ~/.zshrc
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$(logname)/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# echo 'export PATH=/opt/homebrew/bin:$PATH' >>~/.zshrc
+# source ~/.zshrc
 
 brew install git
 
