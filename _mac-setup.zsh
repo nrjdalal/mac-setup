@@ -1,34 +1,15 @@
-sudo softwareupdate --install-rosetta --agree-to-license
+brew install tree
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" <<INPUT
-
-INPUT
-
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$(logname)/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# echo 'export PATH=/opt/homebrew/bin:$PATH' >>~/.zshrc
-# source ~/.zshrc
-
-brew install git
-
-brew install --cask blackhole-2ch
-brew install --cask rectangle
-brew install --cask stats
-
+brew install --cask affinity-designer
+brew install --cask affinity-photo
+brew install --cask affinity-publisher
 brew install --cask figma
 brew install --cask firefox
 brew install --cask fontbase
 brew install --cask google-chrome
 brew install --cask iina
-brew install --cask iterm2
-brew install --cask keka
 brew install --cask mongodb-compass
 brew install --cask qbittorrent
 brew install --cask telegram
 brew install --cask visual-studio-code
 brew install --cask whatsapp
-
-brew tap mongodb/brew
-brew install mongodb-community
-brew services start mongodb-community
