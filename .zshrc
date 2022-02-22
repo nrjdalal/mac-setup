@@ -1,5 +1,14 @@
 PROMPT="%(?.%F{green}.%F{red})%B%~ %(!.#.>)%b%f "
 
+# create github repository, pass --private to create private repository
+mkrepo() {
+  if [[ "$#" == "0" ]]; then
+    command gh repo create $(basename $(pwd)) -d '' --push -s . --public
+  else
+    command gh repo create $(basename $(pwd)) -d '' --push -s . "$@"
+  fi
+}
+
 # git add & git commit at once
 @git() {
   if [[ "$#" == "0" ]]; then
