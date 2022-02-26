@@ -1,8 +1,8 @@
 {
-  //~ css
+  // ~ css
   "css.lint.unknownAtRules": "ignore",
 
-  //~ editor
+  // ~ editor
   "editor.bracketPairColorization.enabled": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[dotenv]": {
@@ -31,17 +31,18 @@
   "editor.wordWrap": "on",
   "editor.wrappingStrategy": "advanced",
 
-  //~ emmet
+  // ~ emmet
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
   },
 
-  //~ explorer
+  // ~ explorer
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.sortOrder": "filesFirst",
 
-  //~ files
+  // ~ files
   "files.associations": {
     "*.json": "jsonc"
   },
@@ -49,14 +50,14 @@
     "**/.git": false
   },
 
-  //~ security
+  // ~ security
   "security.workspace.trust.untrustedFiles": "open",
 
-  //~ workbench
+  // ~ workbench
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.iconTheme": "material-icon-theme",
 
-  //~ @extension - better-comments
+  // ~ @extension - better-comments
   "better-comments.tags": [
     {
       "tag": "~",
@@ -65,10 +66,10 @@
     }
   ],
 
-  //~ @extension - markdown preview github styling
+  // ~ @extension - markdown preview github styling
   "markdown-preview-github-styles.colorTheme": "light",
 
-  //~ @extension - live sass compiler
+  // ~ @extension - live sass compiler
   "liveSassCompile.settings.formats": [
     {
       "format": "compressed",
@@ -83,11 +84,11 @@
   ],
   "liveSassCompile.settings.generateMap": false,
 
-  //~ @extension - prettier - code formatter
+  // ~ @extension - prettier - code formatter
   "prettier.printWidth": 120,
   "prettier.semi": false,
   "prettier.singleQuote": true,
 
-  //~ @extension - tabnine
+  // ~ @extension - tabnine
   "tabnine.experimentalAutoImports": true
 }
