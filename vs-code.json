@@ -1,0 +1,94 @@
+{
+  //~ css
+  "css.lint.unknownAtRules": "ignore",
+
+  //~ editor
+  "editor.bracketPairColorization.enabled": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.insertSpaces": true,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.wrappingStrategy": "advanced",
+
+  //~ emmet
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
+  //~ explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrder": "filesFirst",
+
+  //~ files
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "files.exclude": {
+    "**/.git": false
+  },
+
+  "editor.fontFamily": "Fira Code,Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+
+  //~ security
+  "security.workspace.trust.untrustedFiles": "open",
+
+  //~ workbench
+  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.iconTheme": "material-icon-theme",
+
+  //~ @extension - better-comments
+  "better-comments.tags": [
+    {
+      "tag": "~",
+      "color": "black",
+      "backgroundColor": "#99999999"
+    }
+  ],
+
+  //~ @extension - markdown preview github styling
+  "markdown-preview-github-styles.colorTheme": "light",
+
+  //~ @extension - live sass compiler
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": null
+    },
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": null
+    }
+  ],
+  "liveSassCompile.settings.generateMap": false,
+
+  //~ @extension - prettier - code formatter
+  "prettier.printWidth": 120,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+
+  //~ @extension - tabnine
+  "tabnine.experimentalAutoImports": true
+}
