@@ -57,7 +57,7 @@
   "workbench.colorTheme": "GitHub Dark Default",
   "workbench.iconTheme": "material-icon-theme",
 
-  // ~ @extension - better-comments
+  // ~ @extension - better comments
   "better-comments.tags": [
     {
       "tag": "~",
@@ -87,8 +87,5 @@
   // ~ @extension - prettier - code formatter
   "prettier.printWidth": 120,
   "prettier.semi": false,
-  "prettier.singleQuote": true,
-
-  // ~ @extension - tabnine
-  "tabnine.experimentalAutoImports": true
+  "prettier.singleQuote": true
 }
