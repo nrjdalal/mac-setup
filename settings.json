@@ -20,6 +20,8 @@
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.insertSpaces": true,
@@ -46,9 +48,6 @@
   "files.exclude": {
     "**/.git": false
   },
-
-  "editor.fontFamily": "Fira Code,Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": true,
 
   //~ security
   "security.workspace.trust.untrustedFiles": "open",
