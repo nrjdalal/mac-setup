@@ -76,6 +76,8 @@ END
 grep -Fqx $VAR $(brew --prefix)/etc/Caddyfile || echo "$VAR" >>$(brew --prefix)/etc/Caddyfile
 sudo brew services restart caddy
 
+# ~ brew casks
+
 brew install --cask affinity-designer
 brew install --cask affinity-photo
 brew install --cask affinity-publisher
