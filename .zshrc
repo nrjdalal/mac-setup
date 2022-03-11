@@ -48,6 +48,9 @@ ls() {
 rename() {
   if [[ "$#" == "1" ]]; then
     command [ ! -d "../$1/" ] && rsync -a "$(pwd)/" "../$1" && rm -rf "$(pwd)/" && cd "../$1/"
+    if [[ $? == 0 && "$TERM_PROGRAM" == "vscode" ]]; then
+      code -r .
+    fi
   elif [[ "$#" == "2" ]]; then
     command [ ! -d "$2/" ] && rsync -a "$1/" "$2" && rm -rf "$1/"
   else
@@ -56,3 +59,14 @@ rename() {
     command echo " rename dirname new_dirname ~ renames existing dir to new"
   fi
 }
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="bg=#000000,fg=#333333"
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="fg=green,bold,underline"
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="fg=red,bold,underline"
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
