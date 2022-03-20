@@ -14,11 +14,11 @@
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
-  "[shellscript]": {
+  "[properties]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
@@ -65,24 +65,6 @@
       "backgroundColor": "#99999999"
     }
   ],
-
-  // ~ @extension - markdown preview github styling
-  "markdown-preview-github-styles.colorTheme": "light",
-
-  // ~ @extension - live sass compiler
-  "liveSassCompile.settings.formats": [
-    {
-      "format": "compressed",
-      "extensionName": ".min.css",
-      "savePath": null
-    },
-    {
-      "format": "expanded",
-      "extensionName": ".css",
-      "savePath": null
-    }
-  ],
-  "liveSassCompile.settings.generateMap": false,
 
   // ~ @extension - prettier - code formatter
   "prettier.printWidth": 120,
