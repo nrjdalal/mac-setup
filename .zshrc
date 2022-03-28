@@ -1,11 +1,11 @@
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
+
 setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt INC_APPEND_HISTORY_TIME
-
 setopt RM_STAR_SILENT
 
 preexec() {
@@ -13,6 +13,9 @@ preexec() {
 }
 
 precmd() {
+  if [ -z "$newline" ]; then
+    nohup ls -1 ~/.deleted | grep -v "$(ls -1 ~/.deleted | tail -n 3)" | xargs rm -rf &>/dev/null
+  fi
   CURRENT_BRANCH=$(git branch --show-current 2>/dev/null)
   NEWLINE=$'\n'
   PROMPT="$newline%F{cyan}%~ %F{white}$CURRENT_BRANCH$NEWLINE%(?.%F{green}.%F{red})%B%(!.#.>)%b%f "
@@ -35,6 +38,33 @@ precmd() {
 
 # aliases
 alias zshedit='code ~/.zshrc'
+
+# make and change to directory
+cdx() {
+  mkdir -p $1 && cd $1
+}
+
+# better listing
+lsx() {
+  tree --filesfirst -aCL 1 | sed -e 's/├── //g' -e 's/└── //g' | tail -n +2
+}
+
+# remove all to custom bin
+rmx() {
+  local content=$(ls -A1 | wc -l | xargs)
+  local visible=$(ls -1 | wc -l | xargs)
+  local hidden=$((content - visible))
+  local time=~/.deleted/$(date +%Y-%m-%d)/$(date +%s)
+  if ((content > 0)); then
+    command mkdir -p $time
+    if ((hidden > 0)); then
+      command mv .* $time
+    fi
+    if ((visible > 0)); then
+      command mv * $time
+    fi
+  fi
+}
 
 # create github repository, pass --private to create private repository
 mkrepo() {
@@ -59,14 +89,10 @@ mkrepo() {
     command git add -A 2>/dev/null
     command git commit -m "$1" 2>/dev/null
     command git push
-  else
-    command echo 'Usage:'
-    command echo ' @git                  ~ pushes commit with default datetime'
-    command echo ' @git "Custom message" ~ pushes commit with custom message'
   fi
 }
 
-# install npm packages using yarn
+# manage npm packages using yarn (just add @ in front of npm)
 @npm() {
   if [[ "$1" == "install" ]]; then
     command yarn add ${@:2}
@@ -78,15 +104,6 @@ mkrepo() {
 # kill pid by port
 close() {
   lsof -i :$1 | awk '{print $2}' | tail +2 | xargs kill -9
-}
-
-# override ls without flags
-ls() {
-  if [[ "$#" == "0" ]]; then
-    command tree --filesfirst -aCL 1 | sed -e 's/├── //g' -e 's/└── //g' | tail -n +2
-  else
-    command ls "$@"
-  fi
 }
 
 # rename current working dir or an existing folder
