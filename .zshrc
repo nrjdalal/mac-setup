@@ -13,9 +13,6 @@ preexec() {
 }
 
 precmd() {
-  if [ -z "$newline" ]; then
-    nohup ls -1 ~/.deleted | grep -v "$(ls -1 ~/.deleted | tail -n 3)" | xargs rm -rf &>/dev/null
-  fi
   CURRENT_BRANCH=$(git branch --show-current 2>/dev/null)
   NEWLINE=$'\n'
   PROMPT="$newline%F{cyan}%~ %F{white}$CURRENT_BRANCH$NEWLINE%(?.%F{green}.%F{red})%B%(!.#.>)%b%f "
@@ -37,7 +34,7 @@ precmd() {
 }
 
 # aliases
-alias zshedit='code ~/.zshrc'
+alias zshrc='code ~/.zshrc'
 
 # make and change to directory
 cdx() {
@@ -47,23 +44,6 @@ cdx() {
 # better listing
 lsx() {
   tree --filesfirst -aCL 1 | sed -e 's/├── //g' -e 's/└── //g' | tail -n +2
-}
-
-# remove all to custom bin
-rmx() {
-  local content=$(ls -A1 | wc -l | xargs)
-  local visible=$(ls -1 | wc -l | xargs)
-  local hidden=$((content - visible))
-  local time=~/.deleted/$(date +%Y-%m-%d)/$(date +%s)
-  if ((content > 0)); then
-    command mkdir -p $time
-    if ((hidden > 0)); then
-      command mv .* $time
-    fi
-    if ((visible > 0)); then
-      command mv * $time
-    fi
-  fi
 }
 
 # create github repository, pass --private to create private repository
